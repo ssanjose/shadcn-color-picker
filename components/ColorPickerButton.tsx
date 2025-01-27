@@ -21,25 +21,25 @@ const ColorPickerButton = React.forwardRef<
     onChange?: React.Dispatch<React.SetStateAction<string>>
   }
 >(({ className, color, onChange, ...props }, ref) => {
-  const [colorValue, setColorValue] = (color && onChange) ? [color, onChange] : React.useState("#58E1BE");
+  const [colorValue, setColorValue] = React.useState("#58E1BE");
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           className={cn("w-[2rem] h-[2rem] rounded border text-foreground self-center", className)}
-          style={{ backgroundColor: colorValue }}
+          style={{ backgroundColor: color || colorValue }}
           {...props}>
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-fit">
         <ColorPicker>
-          <ColorPickerHex color={colorValue} onChange={setColorValue} />
+          <ColorPickerHex color={color || colorValue} onChange={onChange || setColorValue} />
           <ColorPickerInput
             type="text"
-            value={colorValue}
+            value={color || colorValue}
             ref={ref}
-            onChange={(e) => setColorValue(e.target.value)}
+            onChange={(e) => onChange ? onChange(e.target.value) : setColorValue(e.target.value)}
           />
         </ColorPicker>
       </PopoverContent>

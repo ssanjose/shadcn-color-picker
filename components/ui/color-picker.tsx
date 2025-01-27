@@ -24,7 +24,7 @@ const ColorPickerHex = React.forwardRef<
   HTMLDivElement,
   Omit<React.ComponentProps<typeof HexColorPicker>, 'onChange'> &
   ColorPickerProps
->(({ className, ...props }, ref) => (
+>(({ className, ...props }, _) => (
   <HexColorPicker
     className={cn("rounded-none w-[100% !important] h-[100% !important] border-[0 !important]", className)}
     {...props}
