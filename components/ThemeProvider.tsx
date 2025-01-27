@@ -12,8 +12,8 @@ const DynProvider = dynamic(
 );
 
 export function ThemeProvider({ children, ...props }: React.ComponentProps<typeof StaticProvider>) {
-  // const NextThemeProvider = process.env.NEXT_PUBLIC_NODE_ENV === 'production' ? StaticProvider : DynProvider;
-  const NextThemeProvider = StaticProvider;
+  const NextThemeProvider = process.env.NEXT_PUBLIC_NODE_ENV === 'production' ? StaticProvider : DynProvider;
+  // const NextThemeProvider = StaticProvider;
 
   return (
     <NextThemeProvider {...props}>

@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const ColorPickerButton = React.forwardRef<
-  HTMLElement,
+  HTMLInputElement,
   Omit<React.ComponentProps<React.ElementType>, 'onChange'> & {
     color?: string;
     onChange?: React.Dispatch<React.SetStateAction<string>>
@@ -38,6 +38,7 @@ const ColorPickerButton = React.forwardRef<
           <ColorPickerInput
             type="text"
             value={colorValue}
+            ref={ref}
             onChange={(e) => setColorValue(e.target.value)}
           />
         </ColorPicker>
@@ -45,5 +46,6 @@ const ColorPickerButton = React.forwardRef<
     </Popover>
   );
 });
+ColorPickerButton.displayName = "ColorPickerButton";
 
 export default ColorPickerButton;

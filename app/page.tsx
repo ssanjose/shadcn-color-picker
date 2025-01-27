@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from "react";
+import React from "react";
 import { siteConfig } from "@/config/site";
 import { ColorPicker, ColorPickerHex, ColorPickerInput } from "@/components/ui/color-picker";
 import { ColorContext, useColorContext } from "@/hooks/use-color-context";
