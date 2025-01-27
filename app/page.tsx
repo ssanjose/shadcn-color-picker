@@ -110,7 +110,7 @@ const Installation = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) =
       <div className="space-y-2">
         <p className="text-accent-foreground">Copy the <a href="#color-picker" className="p-1 bg-muted rounded">Color Picker</a> component.</p>
         <pre className="bg-muted p-2 rounded-lg">
-          <code className="text-muted-foreground bg-muted text-sm whitespace-pre-wrap">
+          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
             {`
 "use client"
 
@@ -181,7 +181,7 @@ const Usage = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) => {
       <div className="space-y-2">
         <p className="text-accent-foreground">Copy the <a href="#color-picker" className="p-1 bg-muted rounded">Color Picker</a> component.</p>
         <pre className="bg-muted p-2 rounded-lg whitespace-pre-wrap">
-          <code className="text-muted-foreground bg-muted text-sm whitespace-pre-wrap">
+          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
             {`import { 
   ColorPicker, 
   ColorPickerHex, 
@@ -195,7 +195,7 @@ const Usage = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) => {
           Use the Color Picker component in your application.
         </p>
         <pre className="bg-muted p-2 rounded-lg">
-          <code className="text-muted-foreground bg-muted text-sm whitespace-pre-wrap">
+          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
             {`
 "use client"
 
