@@ -11,7 +11,6 @@ import {
   ColorPickerHex,
   ColorPickerInput
 } from "@/components/ui/color-picker";
-import { PopoverProps } from '@radix-ui/react-popover';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 

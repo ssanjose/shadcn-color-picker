@@ -32,6 +32,7 @@ const ColorPickerHex = React.forwardRef<
 ))
 ColorPickerHex.displayName = "ColorPickerHex"
 
+// You can also use shadcn input instead of this one
 const ColorPickerInput = React.forwardRef<
   HTMLInputElement,
   React.ComponentProps<"input">
