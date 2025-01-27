@@ -31,7 +31,7 @@ const App = ({ color, setColor }: {
   const colorContext = useColorContext();
   return (
     <div style={{ backgroundColor: `${colorContext}` }} className={cn("min-h-screen py-[2.5rem]", inter.className)}>
-      <div className={cn(`container mx-auto w-[99%] max-w-[46rem] min-h-lvw space-y-4 bg-white py-4 px-0 sm:p-4 py-12 rounded-lg bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90`)}>
+      <div className={cn(`container mx-auto w-[95%] max-w-[46rem] min-h-lvw space-y-4 bg-white py-4 px-0 sm:p-4 py-12 rounded-lg bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90`)}>
         <header className="space-y-2 pb-[5rem] flex flex-col items-center">
           <div className="space-y-2 text-center mb-2">
             <h1 className="text-3xl sm:text-5xl font-bold pt-2">{siteConfig.name}</h1>
@@ -81,7 +81,7 @@ const App = ({ color, setColor }: {
             </div>
           </div>
         </header>
-        <main className="space-y-12 px-1 sm:p-0">
+        <main className="space-y-12">
           <Installation id="installation" />
           <Usage id="usage" />
         </main>
@@ -109,8 +109,8 @@ const Installation = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) =
       </div>
       <div className="space-y-2">
         <p className="text-accent-foreground">Copy the <a href="#color-picker" className="p-1 bg-muted rounded">Color Picker</a> component.</p>
-        <pre className="bg-muted p-2 rounded-lg">
-          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
+        <pre className="bg-muted p-2 rounded-lg overflow-x-auto">
+          <code className="text-muted-foreground bg-muted text-sm sm:whitespace-pre-wrap">
             {`
 "use client"
 
@@ -180,8 +180,8 @@ const Usage = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) => {
       <h2 className="text-2xl font-bold mb-4">Usage</h2>
       <div className="space-y-2">
         <p className="text-accent-foreground">Copy the <a href="#color-picker" className="p-1 bg-muted rounded">Color Picker</a> component.</p>
-        <pre className="bg-muted p-2 rounded-lg whitespace-pre-wrap">
-          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
+        <pre className="bg-muted p-2 rounded-lg overflow-x-auto">
+          <code className="text-muted-foreground bg-muted text-sm">
             {`import { 
   ColorPicker, 
   ColorPickerHex, 
@@ -194,8 +194,8 @@ const Usage = ({ className, id }: React.HTMLAttributes<HTMLDivElement>) => {
         <p className="text-accent-foreground">
           Use the Color Picker component in your application.
         </p>
-        <pre className="bg-muted p-2 rounded-lg">
-          <code className="text-muted-foreground bg-muted text-xs sm:text-sm whitespace-pre-wrap">
+        <pre className="bg-muted p-2 rounded-lg overflow-x-auto">
+          <code className="text-muted-foreground bg-muted text-sm">
             {`
 "use client"
 
